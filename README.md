@@ -11,7 +11,7 @@ version: "2"
 
 services:
   proxy:
-    from: dockhero/caddy-proxy
+    image: dockhero/caddy-proxy
     ports:
       - "80:80"
       - "80:80/udp"
