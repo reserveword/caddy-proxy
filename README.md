@@ -32,36 +32,10 @@ volumes:
 ```
 
 
-Use with Dockhero
--------------------
+Use as HTTP/2 and QUIC proxy for your Heroku app
+------------------------------------------------
 
-First install Dockhero addon and plugin
+Use [Dockhero](https://elements.heroku.com/addons/dockhero) Heroku add-on with
+[caddy-proxy](https://github.com/dockhero/generators/tree/master/caddy-proxy) example stack
 
-```bash
-heroku addons:create dockhero
-heroku plugins:install dockhero
-heroku dh:wait
-```
-
-Then generate the new stack using *helloworld* template
-
-```bash
-heroku dh:generate helloworld
-```
-
-Now spin up the stack:
-```bash
-heroku dh:compose up -d
-```
-
-and check the logs with
-
-```bash
-heroku logs --tail -p dockhero
-```
-
-If everything went fine, you should be able to see the app via Dockhero URL:
-
-```bash
-heroku dh:open
-```
+See [example](https://github.com/dockhero/quic-protocol-demo)
