@@ -1,2 +1,2 @@
-https://{$SOURCE_HOST}
+https://{$VIRTUAL_HOST}
 proxy / {$TARGET_URL}

@@ -3,6 +3,35 @@ Caddy Proxy
 
 [Caddy Server](https://caddyserver.com/) in reverse proxy mode
 
+Docker Compose example
+----------------------
+
+```yaml
+version: "2"
+
+services:
+  proxy:
+    from: dockhero/caddy-proxy
+    ports:
+      - "80:80"
+      - "80:80/udp"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - caddy_certificates:/srv
+    environment:
+      VIRTUAL_HOST: ${DOCKHERO_HOST}
+      TARGET_URL: http://app:8080
+
+  app:
+    image: dockhero/dockhero-docs:hello
+
+volumes:
+  caddy_certificates:
+    driver: local
+```
+
+
 Use with Dockhero
 -------------------
 
