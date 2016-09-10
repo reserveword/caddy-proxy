@@ -1,0 +1,2 @@
+https://{$SOURCE_HOST}
+proxy / {$TARGET_URL}
