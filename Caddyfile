@@ -1,4 +1,3 @@
 https://{$VIRTUAL_HOST}
 proxy / {$TARGET_URL}
-log stdout
 errors stderr
