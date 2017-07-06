@@ -1,4 +1,6 @@
 https://{$VIRTUAL_HOST}
-proxy / {$TARGET_URL}
+proxy / {$TARGET_URL} {
+       transparent
+}
 log stdout
 errors stderr
