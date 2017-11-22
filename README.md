@@ -20,7 +20,7 @@ services:
     volumes:
       - caddy_certificates:/srv
     environment:
-      VIRTUAL_HOST: ${DOCKHERO_HOST}
+      VIRTUAL_HOSTS: https://${DOCKHERO_HOST}
       TARGET_URL: http://app:8080
 
   app:
