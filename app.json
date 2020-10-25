@@ -1,16 +1,88 @@
 {
   "name": "Caddy Reverse Proxy",
   "description": "Deploy caddy-proxy to Heroku.",
-  "keywords": ["caddy", "QUIC", "HTTP/3"],
+  "keywords": [
+    "caddy",
+    "QUIC",
+    "HTTP/3"
+  ],
   "env": {
-     "VIRTUAL_HOSTS": {
+    "VIRTUAL_HOSTS": {
       "description": "外部网址"
     },
-     "TARGET_URL": {
+    "TARGET_URL": {
       "description": "被代理的网址"
+    },
+    "USE_ACME_SH": {
+      "description": "设置为1以使用acmesh自动获取SSL证书",
+      "required": "false"
+    },
+    "CF_Key": {
+      "description": "Cloudflare DNS API 第一种方案",
+      "required": "false"
+    },
+    "CF_Email": {
+      "description": "Cloudflare DNS API 第一种方案",
+      "required": "false"
+    },
+    "CF_Token": {
+      "description": "Cloudflare DNS API 第二种方案",
+      "required": "false"
+    },
+    "CF_Account_ID": {
+      "description": "Cloudflare DNS API 第二种方案",
+      "required": "false"
+    },
+    "CF_Zone_ID": {
+      "description": "Cloudflare DNS API 第二种方案（可选，限制应用只能访问这个zone）",
+      "required": "false"
+    },
+    "DP_Id": {
+      "description": "DNSPod DNS API",
+      "required": "false"
+    },
+    "DP_Key": {
+      "description": "DNSPod DNS API",
+      "required": "false"
+    },
+    "CX_Key": {
+      "description": "CloudXNS DNS API",
+      "required": "false"
+    },
+    "CX_Secret": {
+      "description": "CloudXNS DNS API",
+      "required": "false"
+    },
+    "GD_Key": {
+      "description": "GoDaddy DNS API",
+      "required": "false"
+    },
+    "GD_Secret": {
+      "description": "GoDaddy DNS API",
+      "required": "false"
+    },
+    "PDNS_Url": {
+      "description": "PowerDNS DNS API",
+      "required": "false"
+    },
+    "PDNS_ServerId": {
+      "description": "PowerDNS DNS API",
+      "required": "false"
+    },
+    "PDNS_Token": {
+      "description": "PowerDNS DNS API",
+      "required": "false"
+    },
+    "PDNS_Ttl": {
+      "description": "PowerDNS DNS API",
+      "required": "false"
+    },
+    "OTHER_DNS_API_ENV": {
+      "description": "其他 DNS API 所需的环境变量，具体情况请参考acmesh官方教程",
+      "required": "false"
     }
   },
   "website": "",
   "repository": "",
   "stack": "container"
- }
+}
