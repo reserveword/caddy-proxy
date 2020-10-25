@@ -1,0 +1,16 @@
+{
+  "name": "Caddy Reverse Proxy",
+  "description": "Deploy caddy-proxy to Heroku.",
+  "keywords": ["caddy", "QUIC", "HTTP/3"],
+  "env": {
+     "VIRTUAL_HOSTS": {
+      "description": "外部网址"
+    },
+     "TARGET_URL": {
+      "description": "被代理的网址"
+    }
+  },
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }
