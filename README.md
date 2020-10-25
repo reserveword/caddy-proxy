@@ -42,3 +42,11 @@ Use [Dockhero](https://elements.heroku.com/addons/dockhero) Heroku add-on with
 [caddy-proxy](https://github.com/dockhero/generators/tree/master/caddy-proxy) example stack
 
 See [example](https://github.com/dockhero/quic-protocol-demo)
+
+
+Automatically issue SSL cert using acme.sh
+------------------------------------------
+
+https://github.com/acmesh-official/acme.sh
+
+acme配置问题参考[这里](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)
